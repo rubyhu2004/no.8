@@ -1,0 +1,60 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Cactus Classical Serif", serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.spring {
+  background-image: url("1.png");
+}
+.summer {
+  background-image: url("2.png");
+}
+.autumn {
+  background-image: url("3.png");
+}
+.winter {
+  background-image: url("4.png");
+}
+
+.flower-block {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  
+}
+
+.flower-block:hover {
+  transform: scale(1.05);
+}
+
+.flower-name,
+.flower-desc {
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 2px white;
+  background: none;
+  border: none;
+  padding: 0 5px;
+}

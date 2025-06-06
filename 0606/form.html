@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表單</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Ma+Shan+Zheng&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fef6f9, #f3fdf3);
+      color: #444;
+      padding: 30px;
+      font-family: "Cactus Classical Serif", serif;
+      font-weight: bolder;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d88fa0;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background-color: #fff0f5;
+      border: 2px solid #fbcfe8;
+      border-radius: 15px;
+      padding: 25px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(220, 170, 190, 0.3);
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      color: #b4538d;
+    }
+
+    .question input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    textarea {
+      width: 95%;
+      padding: 10px;
+      border: 1px solid #fbb6ce;
+      border-radius: 10px;
+      background-color: #fffafa;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    button {
+      background-color: #fbb6ce;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #f687b3;
+    }
+
+    @media (max-width: 600px) {
+      form {
+        padding: 20px;
+      }
+
+      button {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌸 花語回饋表單 🌼</h1>
+
+  <form id="flowerForm">
+    <div class="question">
+      <label>1. 你最喜歡春天的哪一種花？</label>
+      <input type="radio" name="spring" value="櫻花"> 櫻花<br>
+      <input type="radio" name="spring" value="風信子"> 風信子<br>
+      <input type="radio" name="spring" value="玉蘭"> 玉蘭<br>
+      <input type="radio" name="spring" value="水仙"> 水仙
+    </div>
+
+    <div class="question">
+      <label>2. 你最喜歡夏天的哪一種花？</label>
+      <input type="radio" name="summer" value="繡球"> 繡球<br>
+      <input type="radio" name="summer" value="向日葵"> 向日葵<br>
+      <input type="radio" name="summer" value="蓮花"> 蓮花<br>
+      <input type="radio" name="summer" value="百合花"> 百合花
+    </div>
+
+    <div class="question">
+      <label>3. 你最喜歡秋天的哪一種花？</label>
+      <input type="radio" name="autumn" value="菊花"> 菊花<br>
+      <input type="radio" name="autumn" value="蘆葦"> 蘆葦<br>
+      <input type="radio" name="autumn" value="桂花"> 桂花<br>
+      <input type="radio" name="autumn" value="曼陀羅"> 曼陀羅
+    </div>
+
+    <div class="question">
+      <label>4. 你最喜歡冬天的哪一種花？</label>
+      <input type="radio" name="winter" value="梅花"> 梅花<br>
+      <input type="radio" name="winter" value="山茶花"> 山茶花<br>
+      <input type="radio" name="winter" value="雪花蓮"> 雪花蓮<br>
+      <input type="radio" name="winter" value="冬青"> 冬青
+    </div>
+
+    <div class="question">
+      <label>5. 分享一句你喜愛的花語！</label>
+      <textarea name="flowerMessage" rows="3" placeholder="例如：櫻花——粉嫩浪漫，春季代表花..."></textarea>
+    </div>
+
+    <div class="question">
+      <label>6. 有什麼想對開發者建議的嗎？</label>
+      <textarea name="feedback" rows="3" placeholder="歡迎留下你的想法～"></textarea>
+    </div>
+
+    <div class="buttons">
+      <button type="reset">清除</button>
+      <button type="submit">送出</button>
+    </div>
+  </form>
+
+</body>
+</html>

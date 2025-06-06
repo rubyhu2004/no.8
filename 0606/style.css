@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  font-family: "Cactus Classical Serif", serif;
+}
+
+body {
+  background: url('index.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+header {
+  background-color: rgba(230, 210, 250, 0.8);
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.seasons {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.season {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+  padding: 1rem;
+}
+
+.season:hover {
+  transform: scale(1.1);
+  color: #000;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(230, 210, 250, 0.8);
+}
+
+.form-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.form-link:hover {
+  background-color: #f0f0f0;
+}
+
+@media (orientation: portrait) {
+  .seasons {
+    flex-direction: column;
+  }
+
+  .season {
+    writing-mode: horizontal-tb;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .season {
+    font-size: 2.2rem;
+    padding: 0.8rem;
+  }
+
+  header, footer {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .season {
+    font-size: 1.6rem;
+    padding: 0.6rem;
+  }
+
+  header, footer {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .form-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
